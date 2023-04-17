@@ -1,9 +1,12 @@
 <script>
+	import Analytics from '$lib/components/Analytics.svelte';
 	import Header from './Header.svelte';
 	import './styles.css';
 </script>
 
 <div class="app">
+	<Analytics />
+
 	<Header />
 
 	<main>
