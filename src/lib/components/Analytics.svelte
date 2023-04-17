@@ -21,7 +21,6 @@
 		partytown = {
 			forward: ['dataLayer.push'],
 			resolveUrl: (url) => {
-				// const siteUrl = `https://iseewhere.com/proxytown`;
 				const siteUrl = `https://sveltekit-ga-partytown.vercel.app/proxytown`;
 
 				if (url.hostname === 'www.googletagmanager.com') {
@@ -43,17 +42,12 @@
 	</script>
 
 	<script bind:this={partytownScriptEl}></script>
-	<!-- Insert `partytownSnippet` here -->
+	<!-- conditionally load google analytics ( on production only for example) -->
 
-	<!-- Insert `partytownSnippet` here -->
-	{#if $page.url.hostname === 'sveltekit-ga-partytown.vercel.app.com'}
-		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-9NHNR6ZQTS">
+	{#if $page.url.hostname === 'sveltekit-ga-partytown.vercel.app'}
+		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=<YOUR-ID-HERE>">
 		</script>
 
-		<!-- GTM script + config  -->
-
-		<!-- GTM script + config  -->
-		<!-- GTM script + config  -->
 		<!-- GTM script + config  -->
 		<script type="text/partytown">
 			window.dataLayer = window.dataLayer || [];
@@ -61,7 +55,7 @@
 				dataLayer.push(arguments);
 			}
 			gtag('js', new Date());
-			gtag('config', 'G-9NHNR6ZQTS', {
+			gtag('config', '<YOUR-ID-HERE>', {
 				page_path: window.location.pathname
 			});
 		</script>
