@@ -46,12 +46,13 @@
 	<!-- Insert `partytownSnippet` here -->
 
 	<!-- Insert `partytownSnippet` here -->
-	{#if $page.url.hostname === 'sveltekit-ga-partytown.vercel.app'}
+	{#if $page.url.hostname === 'sveltekit-ga-partytown.vercel.app.com'}
 		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-9NHNR6ZQTS">
 		</script>
 
 		<!-- GTM script + config  -->
 
+		<!-- GTM script + config  -->
 		<!-- GTM script + config  -->
 		<!-- GTM script + config  -->
 		<script type="text/partytown">
