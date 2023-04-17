@@ -1,11 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+
 	import { partytownSnippet } from '@builder.io/partytown/integration';
+	import { page } from '$app/stores';
 
 	// Add the Partytown script to the DOM head
 	let partytownScriptEl: HTMLScriptElement;
 
 	onMount(() => {
+		console.log($page.url);
 		if (partytownScriptEl) {
 			partytownScriptEl.textContent = partytownSnippet();
 		}
@@ -41,27 +44,25 @@
 
 	<script bind:this={partytownScriptEl}></script>
 	<!-- Insert `partytownSnippet` here -->
-	<!-- Insert `partytownSnippet` here -->
-	<!-- Insert `partytownSnippet` here -->
-	<!-- Insert `partytownSnippet` here -->
-	<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-9NHNR6ZQTS">
-	</script>
 
-	<!-- GTM script + config  -->
+	<!-- Insert `partytownSnippet` here -->
+	{#if $page.url.hostname === 'sveltekit-ga-partytown.vercel.app'}
+		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-9NHNR6ZQTS">
+		</script>
 
-	<!-- prod: G-6W7F197GHD -->
-	<!-- dev : G-9NHNR6ZQTS -->
-	<!-- dev : G-9NHNR6ZQTS -->
-	<!-- dev : G-9NHNR6ZQTS -->
-	<!-- dev : G-9NHNR6ZQTS -->
-	<script type="text/partytown">
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-		gtag('config', 'G-9NHNR6ZQTS', {
-			page_path: window.location.pathname
-		});
-	</script>
+		<!-- GTM script + config  -->
+
+		<!-- GTM script + config  -->
+		<!-- GTM script + config  -->
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-9NHNR6ZQTS', {
+				page_path: window.location.pathname
+			});
+		</script>
+	{/if}
 </svelte:head>
