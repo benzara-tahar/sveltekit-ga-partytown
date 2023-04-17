@@ -43,22 +43,24 @@
 	<!-- Insert `partytownSnippet` here -->
 	<!-- Insert `partytownSnippet` here -->
 	<!-- Insert `partytownSnippet` here -->
-	<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-81VKNQCWWR">
+	<!-- Insert `partytownSnippet` here -->
+	<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-9NHNR6ZQTS">
 	</script>
 
 	<!-- GTM script + config  -->
 
 	<!-- prod: G-6W7F197GHD -->
-	<!-- dev : G-81VKNQCWWR -->
-	<!-- dev : G-81VKNQCWWR -->
-	<!-- dev : G-81VKNQCWWR -->
+	<!-- dev : G-9NHNR6ZQTS -->
+	<!-- dev : G-9NHNR6ZQTS -->
+	<!-- dev : G-9NHNR6ZQTS -->
+	<!-- dev : G-9NHNR6ZQTS -->
 	<script type="text/partytown">
 		window.dataLayer = window.dataLayer || [];
 		function gtag() {
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-		gtag('config', 'G-81VKNQCWWR', {
+		gtag('config', 'G-9NHNR6ZQTS', {
 			page_path: window.location.pathname
 		});
 	</script>
